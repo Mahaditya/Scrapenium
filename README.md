@@ -23,3 +23,4 @@ All the elements mentioned in node_selectors.py xpaths dictionary will be scrape
 
 From all the pages same elements would be extracted so make sure all the pages have same kind of structure.
 
+run scraper.py to scrape
