@@ -21,5 +21,5 @@ value is a string of xpath of the elements
 
 All the elements mentioned in node_selectors.py xpaths dictionary will be scraped.
 
-from all the pages same elements would be extracted so make sure all the pages have same kind of structure.
+From all the pages same elements would be extracted so make sure all the pages have same kind of structure.
 
