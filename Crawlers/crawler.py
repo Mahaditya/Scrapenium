@@ -5,12 +5,12 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 import time
-from paths import data-xpaths as xpaths
-from paths import extra-xpaths as other-paths
+from paths import data_xpaths as xpaths
+from paths import extra_xpaths as other_paths
 from paths import driverPath
 chrome_options=webdriver.ChromeOptions()
 driver = webdriver.Chrome(driverPath,chrome_options=chrome_options)
-def pick_all(url=startUrl,wait=10):
+def pick_all(url,wait=10):
     driver.get(url)
     data=[]
     for key,xpath in xpaths.items():
@@ -21,14 +21,14 @@ def pick_all(url=startUrl,wait=10):
             data.append("None") 
     return data
 
-def pick(xpath,url=startUrl,wait=10):
+def pick(xpath,url,wait=10):
     driver.get(url)
     try:
         return WebDriverWait(driver, wait).until(EC.presence_of_element_located((By.XPATH,xpath))).text
     except:
         return "None"  
 
-def pick_similar(xpath,attribute,url=startUrl,wait=10):
+def pick_similar(xpath,attribute,url,wait=10):
     driver.get(url)
     try: 
         elements = WebDriverWait(driver, wait).until(EC.presence_of_all_elements_located((By.XPATH,xpath)))
@@ -40,7 +40,7 @@ def pick_similar(xpath,attribute,url=startUrl,wait=10):
     return data
 
 
-def pick_group(parent_xpath,want_text,url=startUrl):
+def pick_group(parent_xpath,want_text,url):
     driver.get(url)
     children=parent.find_elements(By.XPATH,"./child::*")
     return data
