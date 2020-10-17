@@ -33,15 +33,5 @@ def scrape():
 def scrapeTopTal():
     
 
-@app.route("/hello",methods=['POST'])
-def hello():
-    print("inside hello")
-    return "after hello"
-@app.route("/fetchCodeMentorData",methods=['POST'])
-def fetchCodeMentorData():
-    scrape()
-    return "done"
 
-# if __name__ == '__main__':
-#      app.run(host='0.0.0.0',port=80)
-# scrape()
+
