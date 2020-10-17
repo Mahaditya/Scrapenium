@@ -3,7 +3,7 @@ import datetime
 import time
 
 class Database: 
-    def __init__(self,database,host='127.0.0.1',user='root',password='root'):
+    def __init__(self,database,host,user,password):
         self.database=database
         self.host=host
         self.user=user
