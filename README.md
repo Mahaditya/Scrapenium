@@ -1,26 +1,17 @@
 # Scrapenium
-General purpose web scraping using Selenium
+Scrape Dynamic websites using selenium just by entering the xpaths.
 
-Right now scraper can scrape elements using xpaths only.
-Use chrome developers tools to find xpaths.
+This Library provides you with methods to scrape dynamic websites easily.
 
-#### Entering urls
+#### How to create a crawler #####
 
-There is a list in urls.py called url_list.
-Enter all the urls you want to scrape from as strings.
-Scraper will open each url in order and scrape from that url.
+Open CLI in the main directory(Scrapenium) and type ./scrapenium createcrawler [NAME].
+This creates a crawler in Crawlers Directorty.
+-------Each crawler contains a file called scrapenium.py. This is where you write crawling logic using exposed functions.
+-------There is another file called paths.py this is where you write all the xpaths as a key value pairs where keys are names of your columns in the data table and values are xpaths values of elements needed to be scraped.
 
-#### Selecting elements to scrape.
+### How to run your crawler #####
 
-There is a dictionary in node_selectors.py called xpaths.
+Open CLI in the main directory and type ./scrapenium start [NAME].
 
-Here are the key value pairs-
-
-Key is a string you want to be the name of your coloumn in csv.
-value is a string of xpath of the elements
-
-All the elements mentioned in node_selectors.py xpaths dictionary will be scraped.
-
-From all the pages same elements would be extracted so make sure all the pages have same kind of structure.
-
-run scraper.py to scrape
+Enjoy !!!!!
