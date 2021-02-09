@@ -4,13 +4,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
 import time
-from paths import data_xpaths as xpaths
-from paths import extra_xpaths as other_paths
 from paths import driverPath
-chrome_options=webdriver.ChromeOptions()
+
+chrome_options=Options()
 driver = webdriver.Chrome(driverPath,chrome_options=chrome_options)
-def pick_all(url,wait=10):
+
+def pick_all(url,xpaths,wait=10):
     driver.get(url)
     data=[]
     for key,xpath in xpaths.items():
